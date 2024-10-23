@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web layout</title>
+    <style>
+    body { 
+        display: grid;
+        grid-template-areas: 
+          "header header header"
+          "nav article ads"
+          "footer footer footer";
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-columns: 20% 1fr 15%;
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 0;
+        }
+      header, footer, article, nav, div {
+        padding: 20px;
+        background: rgb(194, 233, 248);
+      }
+      #pageHeader {
+        grid-area: header;
+      }
+      #pageFooter {
+        grid-area: footer;
+      }
+      #mainArticle { 
+        grid-area: article;      
+        }
+      #mainNav { 
+        grid-area: nav; 
+        }
+      #siteAds { 
+        grid-area: ads; 
+        }
+      
+        header,article,nav, div,footer,div{font-weight: bolder; font-size: 20px;
+         font-family: 'Times New Roman', Times, serif;}
+      </style>
+</head>
+<body>
+    
+    
+        <header id="pageHeader"> 
+         <center>Header - 4. Write a program to design standard web layout using GRID?</center></header>
+        <article id="mainArticle"><center>Article</center></article>
+        <nav id="mainNav"><center>Nav</center></nav>
+        <div id="siteAds"><center>Ads</center></div>
+        <footer id="pageFooter"><center>Footer</center></footer>
+</body>
+</html>
